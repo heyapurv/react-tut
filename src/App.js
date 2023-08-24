@@ -23,10 +23,19 @@ function App() {
     if(mode === 'light'){
       setmode('dark')
       showAlert("Dark Mode has been enabled","success")
+      document.title = 'STRiiXER - Dark Mode'
     }
     else{
       setmode  ('light')
       showAlert("Light mode has been enabled","success")
+      document.title = 'STRiiXER - Light Mode'
+      // interval to show msgs on tab 
+      setInterval(() => {
+        document.title = 'STRiiXER is Amazing'
+      }, 3000);
+      setInterval(() => {
+        document.title =  'Download Now!'
+      }, 1500);
     }
   }
   return (
