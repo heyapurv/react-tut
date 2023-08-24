@@ -18,7 +18,7 @@ function App() {
   }
   return (
    <><div>
-   <Navbar title= 'Abcdef' aboutxt= 'About' mode={mode} toggleMode={toggleMode}/>
+   <Navbar title= 'STRiiXER' aboutxt= 'About' mode={mode} toggleMode={toggleMode}/>
    < div className='container my-3'/>
    <div className='container'><TextForm heading='Enter the Text '/></div>
    {/* <About/> */}
