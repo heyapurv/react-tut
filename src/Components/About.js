@@ -53,7 +53,8 @@ export default function About() {
               the overall appearance, as well as the showing and hiding via CSS
               transitions. You can modify any of this with custom CSS or
               overriding our default variables. It's also worth noting that just
-              about any HTML can go within the <code>.accordion-body</code>,
+              about any HTML can go within the <code>.accordion-body
+                </code>,
               though the transition does limit overflow.
             </div>
           </div>

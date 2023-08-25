@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
-console.log()
+
+
 export default function TextForm(props) {
     const handleUpClick = () =>{
         console.log("Uppercase Was Clicked" + text)

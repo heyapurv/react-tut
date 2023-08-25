@@ -1,33 +1,37 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
     
-    <nav class={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">{props.title}</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+    <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
+    <div className="container-fluid">
+      <Link className="navbar-brand" to="/main">{props.title}</Link>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          {/* <li className="nav-item">
+            <Link className="nav-link active" aria-current="page" to="/TextForm">Home</Link>
+          </li> */}
+          <li className="nav-item">
+            <Link className="nav-link" to="/about">{props.aboutxt}</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">{props.aboutxt}</a>
+          <li className="nav-item">
+            <Link className="nav-link" to="/contactme">Contact Me</Link>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li>
-          {/* <li class="nav-item">
-            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          {/* <li className="nav-item">
+            <Link className="nav-link" to="/">Contact</Link>
+          </li> */}
+          {/* <li className="nav-item">
+            <a className="nav-link disabled" aria-disabled="true">Disabled</a>
           </li> */}
         </ul>
-        <div class={`form-check form-switch  mr-6 text-${props.mode ==='light'?'dark':'light'}`}>
-          <input class="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" id="flexSwitchCheckDefault"/>
-          <label class="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
+        <div className={`form-check form-switch  mr-6 text-${props.mode ==='light'?'dark':'light'}`}>
+          <input className="form-check-input" type="checkbox" onClick={props.toggleMode} role="switch" aria-checked id="flexSwitchCheckDefault"/>
+          <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Enable DarkMode</label>
         </div>
 
       </div>
